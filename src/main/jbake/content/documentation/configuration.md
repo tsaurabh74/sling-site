@@ -38,7 +38,7 @@ The Sling launcher is responsible to provide the Framework properties to the OSG
 1. Resolve any property file inclusions. This may be used to provide more configurability depending on the integration.
 1. Handle OSGi boot delegation support (see below).
 1. Resolve property references of the form `${propName`}
-1. For each property value starting with `ontext:/` do the following, assuming the value to be an URL with scheme `context:`:
+1. For each property value starting with `context:/` do the following, assuming the value to be an URL with scheme `context:`:
     * Copy the application resource to `${sling.home`} preserving the URL path unless such a file already exists.
     * Replace the property value with the path to the newly created file. The path has the form `${sling.home}/relpath`.
 1. Store the properties as `${sling.home}/sling.properties` to be re-used on next startup
